@@ -14,14 +14,21 @@ function odd_or_even(user_choice, user_number, pc_number) {
     }
 }
 
+function rand_numb_generator() {
+    const pc_number = Math.floor(Math.random() * 5) + 1
+    console.log(pc_number);
+    return pc_number;
+}
+
 const user_choice = prompt("Scegli tra 'pari' o 'dispari' (scrivili esattamente così ma senza virgolette!)")
 console.log(user_choice);
 const user_number = Number(prompt("Inserisci un numero da 1 a 5 (compresi e senza barare!)"))
 console.log(user_number);
-const pc_number = Math.floor(Math.random() * 5) + 1
-console.log(pc_number);
 
-alert(odd_or_even(user_choice, user_number, pc_number))
+
+
+
+alert(odd_or_even(user_choice, user_number, rand_numb_generator()))
 
 
 
