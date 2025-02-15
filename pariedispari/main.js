@@ -3,6 +3,27 @@ Pari e Dispari
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 */
 
+//very simple approach with no checks
+function odd_or_even(user_choice, user_number, pc_number) {
+    if ((pc_number + user_number) % 2 == 0 && user_choice == "pari") {
+        return "you won!"
+    } else if ((pc_number + user_number) % 2 == 1 && user_choice == "dispari") {
+        return "you won!"
+    } else {
+        return "you lost!"
+    }
+}
+
+const user_choice = prompt("Scegli tra 'pari' o 'dispari' (scrivili esattamente così ma senza virgolette!)")
+console.log(user_choice);
+const user_number = Number(prompt("Inserisci un numero da 1 a 5 (compresi e senza barare!)"))
+console.log(user_number);
+const pc_number = Math.floor(Math.random() * 5) + 1
+console.log(pc_number);
+
+alert(odd_or_even(user_choice, user_number, pc_number))
+
+
 
 
 //extremely overcomplicated just for fun
